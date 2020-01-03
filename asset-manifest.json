@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/AmazingHiring/static/css/main.1eddc7a6.chunk.css",
+    "main.js": "/AmazingHiring/static/js/main.7bed5c70.chunk.js",
+    "main.js.map": "/AmazingHiring/static/js/main.7bed5c70.chunk.js.map",
+    "runtime-main.js": "/AmazingHiring/static/js/runtime-main.0df98f1e.js",
+    "runtime-main.js.map": "/AmazingHiring/static/js/runtime-main.0df98f1e.js.map",
+    "static/js/2.d93e2e42.chunk.js": "/AmazingHiring/static/js/2.d93e2e42.chunk.js",
+    "static/js/2.d93e2e42.chunk.js.map": "/AmazingHiring/static/js/2.d93e2e42.chunk.js.map",
+    "index.html": "/AmazingHiring/index.html",
+    "precache-manifest.cef0888eac7eb897a1172de5ac316b9d.js": "/AmazingHiring/precache-manifest.cef0888eac7eb897a1172de5ac316b9d.js",
+    "service-worker.js": "/AmazingHiring/service-worker.js",
+    "static/css/main.1eddc7a6.chunk.css.map": "/AmazingHiring/static/css/main.1eddc7a6.chunk.css.map",
+    "static/js/2.d93e2e42.chunk.js.LICENSE": "/AmazingHiring/static/js/2.d93e2e42.chunk.js.LICENSE"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.0df98f1e.js",
+    "static/js/2.d93e2e42.chunk.js",
+    "static/css/main.1eddc7a6.chunk.css",
+    "static/js/main.7bed5c70.chunk.js"
+  ]
+}
