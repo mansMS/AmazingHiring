@@ -1,0 +1,75 @@
+.Error {
+  text-align: center;
+}
+
+.VacanciesList {
+  .RecruitersBlock {
+    padding: 10px 10px 0 0;
+    border: 1px solid #CFC7C0;
+    border-radius: 5px;
+
+    .RecruiterItem {
+      padding: 5px 8px;
+      margin: 0 0 10px 10px;
+      border: 1px solid #CFC7C0;
+      border-radius: 5px;
+      background-color: #fff;
+      cursor: pointer;
+      outline: none;
+      color: #1b2834;
+
+      &:hover {
+        opacity: .8;
+      }
+    }
+
+    .NotChosenRecruiterItem {
+      background-color: #f7f7f7;
+      opacity: .6;
+
+      &:hover {
+        opacity: .8;
+      }
+    }
+  }
+  
+  .VacanciesBlock {
+    padding: 10px 10px 0;
+    margin: 20px 0;
+    border: 1px solid #CFC7C0;
+    border-radius: 5px;
+
+    .VacancyAdd {
+      display: flex;
+      flex-direction: row-reverse;
+
+      .VacancyAddButton {
+        padding: 5px 8px;
+        border: 1px solid #CFC7C0;
+        text-decoration: none;
+        color: #1b2834;
+        border-radius: 3px;
+        cursor: pointer;
+        opacity: .9;
+      
+        &:hover {
+          opacity: 1;
+        }
+      }
+    }
+
+    .NoVacancies {
+      text-align: center;
+    }
+
+    .VacancyItem {
+      &:not(:last-child) {
+        border-bottom: 1px solid #CFC7C0;
+      }
+      
+      .VacancyTitle {
+        text-decoration: none;
+      }
+    }
+  }
+}

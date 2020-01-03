@@ -1,0 +1,78 @@
+.VacancyItem {
+  .BackButton {
+    display: block;
+    margin: 30px 10px;
+    width: 50px;
+    height: 30px;
+    border-radius: 5px;
+    border: 1px solid #CFC7C0;
+    opacity: .65;
+    cursor: pointer;
+    outline: none;
+    background-color: #fff;
+    background-repeat: no-repeat;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 220 150' x='0px' y='0px'%3e%3cpolygon fill='%231b2834' points='200,70 59.14,70 104.14,25 90,25 40,75 90,125 104.14,125 59.14,80 200,80 '/%3e%3c/svg%3e");
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+  
+  .AdditionalBlock {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 10px;
+
+    .RecruitersBlock {
+      margin-right: 10px;
+
+      .RecruitersLabel {
+        color: #68717c;
+        font-size: 14px;
+        margin-bottom: 5px;
+        margin-top: 0;
+      }
+    
+      .RecruitersList {
+        color: #1b2834;
+    
+        .Recruiter {
+          &:not(:first-child) {
+            margin-left: 10px;
+            padding-left: 10px;
+            border-left: 1px solid #CFC7C0;
+          }
+        }
+      }
+    }
+
+    .VacancyEdit {
+      display: flex;
+      flex-direction: row-reverse;
+
+      .VacancyEditButton {
+        padding: 5px 8px;
+        border: 1px solid #CFC7C0;
+        text-decoration: none;
+        color: #1b2834;
+        border-radius: 3px;
+        cursor: pointer;
+        opacity: .9;
+      
+        &:hover {
+          opacity: 1;
+        }
+      }
+    }
+  }
+  
+  .VacancyBlock {
+    padding: 10px;
+
+    .VacancyText {
+      line-height: 1.5;
+      white-space: pre-wrap;
+    }
+  }
+}

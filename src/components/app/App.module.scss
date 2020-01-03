@@ -1,0 +1,24 @@
+.App {
+  width: 95%;
+  max-width: 670px;
+  margin: 0 auto;
+  
+  h1 {
+    line-height: 1.58;
+    font-size: 24px;
+    font-weight: 600;
+    color: #1b2834;
+  }
+  
+  h2 {
+    line-height: 1.22;
+    font-size: 18px;
+    font-weight: 500;
+    color: #1b2834;
+  }
+
+  input,
+  textarea {
+    box-sizing: border-box;
+  }
+}
