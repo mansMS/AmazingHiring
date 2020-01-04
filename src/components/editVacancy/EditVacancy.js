@@ -88,7 +88,7 @@ const EditVacancy = ({ recruiters, vacancy, vacancyItemChange, history }) => {
 
       <div className={"ButtonsBlock"}>
         <button className={"SubmitButton"} type="submit" onClick={e => submitForm(e)}>Сохранить</button>
-        <button className={"CancelButton"} onClick={history.goBack}>Отменить</button>
+        <button className={"CancelButton"} onClick={history.goBack}>Отменитьььь</button>
       </div>
     </div>
   )
