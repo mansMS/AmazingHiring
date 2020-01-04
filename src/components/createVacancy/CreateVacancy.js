@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import classes from './CreateVacancy.module.scss';
+import './CreateVacancy.scss';
 
 const CreateVacancy = ({ recruiters, newId, recruitersFromURL, createNewVacancy, history }) => {
 
@@ -47,16 +47,16 @@ const CreateVacancy = ({ recruiters, newId, recruitersFromURL, createNewVacancy,
   }
 
   return (
-    <div className={classes.CreateVacancy}>
-      <div className={classes.HeaderBlock}>
+    <div className={"CreateVacancy"}>
+      <div className={"HeaderBlock"}>
         <h1>Создание вакансии</h1>
         {fieldFillingError && <h2>Заполните все поля!!!</h2>}
       </div>
-      <div className={classes.RecruitersBlock}>
-        <div className={classes.RecruiterList}>
+      <div className={"RecruitersBlock"}>
+        <div className={"RecruiterList"}>
           {selectedRecruiters.map(recruiter =>
             <button
-              className={classes.RecruiterItem}
+              className={"RecruiterItem"}
               key={recruiter.id}
               onClick={() => removeRecruiter(recruiter.id)}
             >
@@ -64,38 +64,38 @@ const CreateVacancy = ({ recruiters, newId, recruitersFromURL, createNewVacancy,
             </button>
           )}
         </div>
-        <div className={classes.RecruiterSelect}>
+        <div className={"RecruiterSelect"}>
           <select onChange={adRecruiter}>
-            <option value="973956174" selected>Выберите рекрутера</option>
+            <option value={"Выберите рекрутера"}>Выберите рекрутера</option>
             {notSelectedRecruiters.map(recruiter =>
               <option key={recruiter.id} value={recruiter.id}>{recruiter.name}</option>)}
           </select>
         </div>
       </div>
 
-      <div className={classes.TitlesBlock}>
-        <h2 className={classes.TitlesLabel}>Название</h2>
+      <div className={"TitlesBlock"}>
+        <h2 className={"TitlesLabel"}>Название</h2>
         <input
-          className={classes.TitlesInput}
+          className={"TitlesInput"}
           type="text"
           value={title}
           onChange={(e) => setTitle(e.currentTarget.value)}
         />
       </div>
 
-      <div className={classes.TextBlock}>
-        <h2 className={classes.TitlesLabel}>Текст</h2>
+      <div className={"TextBlock"}>
+        <h2 className={"TitlesLabel"}>Текст</h2>
         <textarea
           rows="17"
-          className={classes.TextInput}
+          className={"TextInput"}
           value={description}
           onChange={e => setDescription(e.target.value)}
         />
       </div>
 
-      <div className={classes.ButtonsBlock}>
-        <button className={classes.SubmitButton} type="submit" onClick={e => submitForm(e)}>Создать</button>
-        <button className={classes.CancelButton} onClick={history.goBack}>Отменить</button>
+      <div className={"ButtonsBlock"}>
+        <button className={"SubmitButton"} type="submit" onClick={e => submitForm(e)}>Создать</button>
+        <button className={"CancelButton"} onClick={history.goBack}>Отменить</button>
       </div>
 
     </div>

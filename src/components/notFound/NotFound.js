@@ -1,12 +1,12 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
-import classes from './NotFound.module.scss';
+import './NotFound.scss';
 
 const NotFound = ({ history }) => {
   return (
-    <div>
+    <div className={"NotFound"}>
       <p>Страница не найдена</p>
-      <Link to="/">На главную</Link>
+      <Link className={"CancelButton"} to="/">На главную</Link>
     </div>
   )
 }

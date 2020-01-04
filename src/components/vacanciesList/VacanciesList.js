@@ -1,13 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Spinner from '../spinner';
-import classes from './VacanciesList.module.scss';
+import './VacanciesList.scss';
 
-const VacanciesList = ({ recruiters, vacancies, loading, error, recruitersFromURL, history }) => {
+const VacanciesList = ({ recruiters, vacancies, loading, error, recruitersFromURL, history, location, match }) => {
 
   if (loading) return <Spinner />
-  if (error) return <h1 className={classes.Error}>Ошибка загрузки</h1>
-  if (!vacancies.length) return <h1 className={classes.Error}>Нет вакансий</h1>
+  if (error) return <h1 className={"Error"}>Ошибка загрузки</h1>
+  if (!vacancies || !vacancies.length) return <h1 className={"Error"}>Нет вакансий</h1>
 
   const onRecruiterClick = id => {
     let newSearch = [];
@@ -33,15 +33,15 @@ const VacanciesList = ({ recruiters, vacancies, loading, error, recruitersFromUR
     : vacancies;
 
   return (
-    <div className={classes.VacanciesList}>
+    <div className={"VacanciesList"}>
       <h1>Список вакансий</h1>
-      <div className={classes.RecruitersBlock}>
+      <div className={"RecruitersBlock"}>
         {recruiters.map(recruiter =>
           <button
             className={
               selectedRecruitersId.includes(recruiter.id)
-                ? classes.RecruiterItem
-                : [classes.RecruiterItem, classes.NotChosenRecruiterItem].join(' ')
+                ? "RecruiterItem"
+                : ["RecruiterItem", "NotChosenRecruiterItem"].join(' ')
             }
             key={recruiter.id}
             onClick={() => onRecruiterClick(recruiter.id)}
@@ -51,17 +51,17 @@ const VacanciesList = ({ recruiters, vacancies, loading, error, recruitersFromUR
         )}
       </div>
 
-      <div className={classes.VacanciesBlock}>
-        <div className={classes.VacancyAdd}>
-          <Link className={classes.VacancyAddButton} to={"create/"}>Добавить вакансию</Link>
+      <div className={"VacanciesBlock"}>
+        <div className={"VacancyAdd"}>
+          <Link className={"VacancyAddButton"} to={"create/"}>Добавить вакансию</Link>
         </div>
         {filteredVacancies.length
           ? filteredVacancies.map(vacancy =>
-            <div key={vacancy.id} className={classes.VacancyItem}>
-              <h2><Link className={classes.VacancyTitle} to={vacancy.id + "/"}>{vacancy.title}</Link></h2>
+            <div key={vacancy.id} className={"VacancyItem"}>
+              <h2><Link className={"VacancyTitle"} to={vacancy.id + "/"}>{vacancy.title}</Link></h2>
             </div>
           ) : (
-            <div className={classes.NoVacancies}>
+            <div className={"NoVacancies"}>
               <h2>Нет вакансий</h2>
             </div>
           )

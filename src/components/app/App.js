@@ -10,7 +10,7 @@ import VacancyItemContainer from '../../containers/VacancyItemContainer';
 import EditVacancyContainer from '../../containers/EditVacancyContainer';
 import NotFound from '../notFound';
 
-import classes from './App.module.scss';
+import './App.scss';
 
 class App extends Component {
   componentDidMount() {
@@ -19,13 +19,13 @@ class App extends Component {
 
   render() {
     return (
-      <div className={classes.App}>
+      <div className={"App"}>
         <Switch>
           <Redirect exact from="/" to="/vacancies/" />
           <Route exact path="/vacancies/" component={VacanciesListContainer} />
           <Route path="/vacancies/create/" component={CreateVacancyContainer} />
           <Route exact path="/vacancies/:id/" component={VacancyItemContainer} />
-          <Route path="/vacancies/:id/edit" component={EditVacancyContainer} />
+          <Route exact path="/vacancies/:id/edit" component={EditVacancyContainer} />
           <Route component={NotFound} />
         </Switch>
       </div>

@@ -6,6 +6,8 @@ import fixURLArray from '../helpers/fixURLArray';
 
 const VacanciesListContainer = ({ recruiters, vacancies, loading, error, history, location }) => {
 
+  // console.log(history);
+  // console.log(location);
   let recruitersFromURL = [];
 
   if (!location.pathname.endsWith('/')) {
@@ -37,6 +39,7 @@ const VacanciesListContainer = ({ recruiters, vacancies, loading, error, history
 }
 
 const mapStateToProps = ({ vacanciesData: { recruiters, vacancies, loading, error } }) => {
+  console.log(recruiters, vacancies)
   return { recruiters, vacancies, loading, error }
 }
 

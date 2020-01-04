@@ -10,7 +10,9 @@ const VacancyItemContainer = ({ recruiters, vacancies, history, location, match 
   }
 
   const vacancy = vacancies.filter(vacancy => vacancy.id === +match.params.id)[0];
-  if (!vacancy) return <p>Такой ваканси нет</p>
+  if (!vacancy) {
+    return <h2 style={{ marginTop: "26px", color: "red", textAlign: "center" }}>Такой страницы не существует</h2>
+  }
 
   const recruitersNamesForVacancy =
     recruiters.filter(recruiter => vacancy.assignees.includes(recruiter.id)).map(recruiter => recruiter.name);

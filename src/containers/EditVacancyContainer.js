@@ -8,7 +8,9 @@ const EditVacancyContainer = ({ recruiters, vacancies, vacancyChange, history, m
 
   const vacancy = vacancies.filter(vacancy => vacancy.id === +match.params.id)[0];
 
-  if (!vacancy) return <p>Вакансия не найдена</p>
+  if (!vacancy) {
+    return <h2 style={{ marginTop: "26px", color: "red", textAlign: "center" }}>Вакансия не найдена</h2>
+  }
 
   const vacancyItemChange = vacancyObject => {
     const editableObjectIndex = vacancy.id - 1;
