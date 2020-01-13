@@ -1,4 +1,4 @@
-# AmazongHiring
+# AmazingHiring
 
 Тестовое задание отсюда: https://github.com/blmzv/testForAmazingHiring/blob/master/README.md
 
